@@ -60,7 +60,22 @@ cd UltraShape
 pip install -r requirements.txt
 ```
 
+## 🔗 BibTeX
+
+If you found this repository helpful, please cite our reports:
+
+```bibtex
+@article{jia2025ultrashape,
+    title={UltraShape 1.0: High-Fidelity 3D Shape Generation via Scalable Geometric Refinement},
+    author={Jia, Tanghui and Yan, Dongyu and Hao, Dehao and Li, Yang and Zhang, Kaiyi and He, Xianyi and Li, Lanjiong and Chen, Jinnan and Jiang, Lutao and Yin, Qishen and Quan, Long and Chen, Ying-Cong and Yuan, Li},
+    journal={arxiv preprint arXiv:2512.21185},
+    year={2025}
+}
+```
+
 ## Acknowledgements
 
-- **[Hunyuan3D-2.1](https://github.com/Tencent-Hunyuan/Hunyuan3D-2.1)** (Open Source)
+Our code is built upon the excellent work of [Hunyuan3D-2.1](https://github.com/Tencent-Hunyuan/Hunyuan3D-2.1). The core idea of our method is greatly inspired by [LATTICE](https://arxiv.org/abs/2512.03052). We deeply appreciate the contributions of these works to the 3D generation community. Please also consider citing **Hunyuan3D 2.1** and **LATTICE**:
+
+- **[Hunyuan3D-2.1](https://github.com/Tencent-Hunyuan/Hunyuan3D-2.1)**
 - **[Lattice3D](https://lattice3d.github.io/)**
