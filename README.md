@@ -4,8 +4,8 @@
 
 <a href="https://arxiv.org/pdf/2512.21185"><img src="https://img.shields.io/badge/arXiv-2512.21185-b31b1b.svg?style=flat-square" alt="arXiv"></a>
 <a href="https://pku-yuangroup.github.io/UltraShape-1.0/"><img src="https://img.shields.io/badge/Project-Page-blue?style=flat-square" alt="Project Page"></a>
-<!-- <a href="https://huggingface.co/"><img src="https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-Models-yellow?style=flat-square" alt="HuggingFace Models"></a> -->
-<!-- <a href="LICENSE"><img src="https://img.shields.io/badge/License-Apache_2.0-blue.svg?style=flat-square" alt="License"></a> -->
+<a href="https://huggingface.co/infinith/UltraShape"><img src="https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-Models-yellow?style=flat-square" alt="HuggingFace Models"></a>
+<a href="LICENSE"><img src="https://img.shields.io/badge/License-Apache_2.0-blue.svg?style=flat-square" alt="License"></a>
 
 </div>
 
@@ -29,13 +29,62 @@ Extensive evaluations demonstrate that UltraShape 1.0 performs competitively wit
 
 ## 🔥 News
 * **[2025-12-25]** 📄 We released the technical report of **UltraShape 1.0** on arXiv.
-* **[Coming Soon]** 🚀 Training code and pre-trained models will be released soon. Stay tuned! (ETA: 12.26)
+* **[2025-12-26]** 🚀 We released the inference code and pre-trained models.
 
 ## 🗓️ To-Do List
-- [ ] Release inference code
-- [ ] Release pre-trained weights (Hugging Face)
+- [x] Release inference code
+- [x] Release pre-trained weights (Hugging Face)
 - [ ] Release training code
 - [ ] Release data processing scripts
+
+## 🛠️ Installation & Usage
+
+### 1. Environment Setup
+```bash
+git clone https://github.com/PKU-YuanGroup/UltraShape-1.0.git
+cd UltraShape
+# 1. Create and activate the environment
+conda create -n ultrashape python=3.10
+conda activate ultrashape
+
+# 2. Install PyTorch (CUDA 12.1 recommended)
+pip install torch==2.5.1 torchvision==0.20.1 torchaudio==2.5.1 --index-url https://download.pytorch.org/whl/cu121
+
+# 3. Install dependencies
+pip install -r requirements.txt
+
+# 4. Install cubvh (Required for MC acceleration)
+pip install git+https://github.com/ashawkey/cubvh --no-build-isolation
+```
+⬇️ Model Weights
+
+Please download the pre-trained weights from Hugging Face [ [infinith/UltraShape](https://huggingface.co/infinith/UltraShape/tree/main) ] and place them in your checkpoint directory (e.g., ./checkpoints/).
+
+
+### 2. Generate Coarse Mesh
+
+First, use Hunyuan3D-2.1 to generate a coarse mesh from your input image.
+
+Repository: [Tencent-Hunyuan/Hunyuan3D-2.1](https://github.com/Tencent-Hunyuan/Hunyuan3D-2.1)
+
+Follow the instructions in the Hunyuan3D-2.1 repository to obtain the initial mesh file (e.g., .glb or .obj).
+
+### 3. Generate Refined Mesh
+
+Once you have the coarse mesh, use the provided script to run the refinement stage.
+
+Run the inference script:
+```bash
+sh scripts/run.sh
+```
+
+image: Path to the reference image.
+
+mesh: Path to the coarse mesh.
+
+output_dir: Directory to save the refined result.
+
+ckpt: Path to the downloaded UltraShape checkpoint.
 
 ## 🔗 BibTeX
 
