@@ -28,6 +28,7 @@ To enable fine-grained geometry refinement, we decouple spatial localization fro
 Extensive evaluations demonstrate that UltraShape 1.0 performs competitively with existing open-source methods in both data processing quality and geometry generation.
 
 ## 🔥 News
+
 * **[2025-12-25]** 📄 We released the technical report of **UltraShape 1.0** on arXiv.
 * **[2025-12-26]** 🚀 We released the inference code and pre-trained models.
 * **[2025-12-31]** 🚀 We released the training code.
@@ -43,7 +44,7 @@ Extensive evaluations demonstrate that UltraShape 1.0 performs competitively wit
 ### 1. Environment Setup
 ```bash
 git clone https://github.com/PKU-YuanGroup/UltraShape-1.0.git
-cd UltraShape
+cd UltraShape-1.0
 # 1. Create and activate the environment
 conda create -n ultrashape python=3.10
 conda activate ultrashape
