@@ -91,6 +91,16 @@ sh scripts/run.sh
 
 **ckpt**: Path to the downloaded UltraShape checkpoint.
 
+*Alternatively, you can run the gradio app for interactive inference:*
+```bash
+python scripts/gradio_app.py --ckpt <path_to_checkpoint>
+```
+
+#### Low VRAM
+1. Use a low value for num_latents (Try 8192)
+2. Use a low chunk_size (Try 2048)
+3. Try the --low_vram arg in gradio_app.py and infer_dit_refine.py
+
 ### 4. Data Preparation & Training
 
 First, prepare the data, including watertight meshes and rendered images.
