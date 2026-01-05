@@ -11,7 +11,7 @@
 <br/>
 
 <div align="center">
-  <img src="asset/images/teaser.png" width="100%" alt="UltraShape 1.0 Teaser" />
+  <img src="docs/assets/images/teaser.png" width="100%" alt="UltraShape 1.0 Teaser" />
 </div>
 
 <br/>
