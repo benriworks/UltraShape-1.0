@@ -91,6 +91,8 @@ sh scripts/run.sh
 
 **ckpt**: Path to the downloaded UltraShape checkpoint.
 
+**step**: the number of DiT inference sampling steps. The default is 50, and it can be reduced to 12 to speed up generation.
+
 *Alternatively, you can run the gradio app for interactive inference:*
 ```bash
 python scripts/gradio_app.py --ckpt <path_to_checkpoint>

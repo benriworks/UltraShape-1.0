@@ -9,3 +9,4 @@ python scripts/infer_dit_refine.py \
     --image inputs/image/1.png \
     --mesh inputs/coarse_mesh/1.glb \
     --config configs/infer_dit_refine.yaml
+    # --steps 12

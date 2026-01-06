@@ -26,7 +26,7 @@ model:
         enable_flashvdm: true
         jitter_query: false
         voxel_query: true
-        voxel_query_res: 128
+        voxel_query_res: &voxel_query_res 128
       
     # 2. DiT Denoiser Config
     dit_cfg:
@@ -45,6 +45,7 @@ model:
         num_moe_layers: 6
         num_experts: 8
         moe_top_k: 2
+        voxel_query_res: *voxel_query_res
 
     # 3. Image Encoder Config
     conditioner_config:
